@@ -1,0 +1,11 @@
+# -*- coding: utf
+with open('rosalind_dna.txt','r') as inp:
+    with open('outputprova.txt','w') as out:
+        s=inp.readline()
+        t=inp.readline()
+        if len(s)<len(t):
+            print 'Sequence s shorter than given subsequence s'
+        else:
+            for i in xrange(len(s)+1):
+                if t==s[i:i+len(t)]:
+                    out.write(str(i+1)+ ' ')
